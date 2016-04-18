@@ -1,0 +1,25 @@
+{
+  "author": "Jeswin Kumar<jeswinpk@agilehead.com>",
+  "scripts": {
+    "start": "./build.sh && node dist/app.js",
+    "monitor": "./build.sh && ./monitor.sh",
+    "test": "./build.sh && ./monitor.sh",
+    "test": "mocha dist/test/test.js"
+  },
+  "dependencies": {
+    "babel-polyfill": "*",
+    "koa": "2.0.0-alpha.3",
+    "koa-route": "3.1.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babel-preset-stage-2": "*",
+    "babel-plugin-transform-class-properties": "*",
+    "babel-relay-plugin-loader": "*",
+    "source-map-loader": "*",
+    "babel-loader": "*",
+    "mocha": "*",
+    "should": "*"
+  }
+}
