@@ -1,0 +1,17 @@
+server {
+  listen 80;
+  listen [::]:80;
+  listen 443 ssl;
+  server_name jobhunt.in www.jobhunt.in;
+
+  ssl_certificate /etc/letsencrypt/live/jobhunt.in/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/jobhunt.in/privkey.pem;
+  client_max_body_size 20M;
+
+  location / {
+    proxy_pass http://localhost:9001;
+    #root /home/chad/sites/jobhunt.in/;
+    #try_files $uri /index.html;
+    #index index.html;
+  }
+}

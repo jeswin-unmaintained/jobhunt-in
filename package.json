@@ -9,7 +9,9 @@
   "dependencies": {
     "babel-polyfill": "*",
     "koa": "2.0.0-alpha.3",
-    "koa-route": "3.1.0"
+    "koa-route": "3.1.0",
+    "koa-bodyparser": "3.0.0",
+    "request-promise": "3.0.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "*",

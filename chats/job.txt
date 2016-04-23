@@ -1,0 +1,27 @@
+Which city are you from?
+  London
+
+Ah, London. Kinda cold out there today (10 degrees).
+What type of Job are you looking for?
+  <select>
+  - Permanent
+  - Contract
+  - Freelance
+
+Contract eh. How much £££ are you looking for?
+  Around 20k
+
+What are your technology skills? eg :Java, Python, Docker etc
+  Python, Django, Ruby, Rails, Postgres, MongoDb
+
+How many years have you been working?
+  About 10 yrs
+
+What kind of companies are you more interested in?
+  <select>
+  - Startups
+  - Corporates
+
+Ah, startups. Nice.
+What's your github id, if you have one?
+  jeswin
