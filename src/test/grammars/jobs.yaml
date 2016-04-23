@@ -1,0 +1,6 @@
+- state: &default
+    name: default
+    entities:
+
+
+- entities:

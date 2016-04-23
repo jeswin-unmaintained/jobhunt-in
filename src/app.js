@@ -2,11 +2,10 @@ import __babelPolyfill from "babel-polyfill";
 import koa from "koa";
 import routes from "koa-route";
 
-import * as testAPI from "./api/test";
+import * as facebookAPI from "./api/facebook";
 
 const app = new koa();
 
-app.use(routes.get("/test/:id", testAPI.hello));
-app.use(routes.get("/test/world", testAPI.world));
+app.use(routes.get("/webhook", facebookAPI.webhook));
 
 app.listen(9001);
