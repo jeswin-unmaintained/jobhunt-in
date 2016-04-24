@@ -1,4 +1,7 @@
 {
+  "name": "yak-ai-wild-yak",
+  "private": true,
+  "version": "0.0.1",
   "author": "Jeswin Kumar<jeswinpk@agilehead.com>",
   "scripts": {
     "start": "./build.sh && node dist/app.js",
@@ -7,18 +10,13 @@
     "test": "mocha dist/test/test.js"
   },
   "dependencies": {
-    "babel-polyfill": "*",
-    "koa": "2.0.0-alpha.3",
-    "koa-route": "3.1.0",
-    "koa-bodyparser": "3.0.0",
-    "request-promise": "3.0.0"
+    "babel-polyfill": "*"
   },
   "devDependencies": {
-    "babel-preset-es2015": "*",
-    "babel-preset-react": "*",
+    "babel-preset-es2015-without-regenerator": "*",
     "babel-preset-stage-2": "*",
     "babel-plugin-transform-class-properties": "*",
-    "babel-relay-plugin-loader": "*",
+    "babel-plugin-transform-async-to-generator": "*",
     "source-map-loader": "*",
     "babel-loader": "*",
     "mocha": "*",

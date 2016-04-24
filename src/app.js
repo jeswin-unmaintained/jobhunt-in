@@ -1,16 +1,24 @@
 import __babelPolyfill from "babel-polyfill";
-import koa from "koa";
-import routes from "koa-route";
-import bodyParser from 'koa-bodyparser';
+import paddock from "yak-ai-paddock";
 
-import * as yak from "./web/yak";
-import * as facebookAPI from "./api/facebook";
+const VERIFY_TOKEN = "exsbfbbizbyelqil";
+const PAGE_ACCESS_TOKEN = "CAADchQHUJC4BAFGQaAQZBipFkgnW8ZBWy0ZAEFBdJC2OGLvmjuuqj1rEoWu1i5F2S6g2GVvyvhgkUlV0gQU7I4jFjwgkNZCI89" +
+  "NzJUPEoZBXC7cMRGiUtmZCyl4t4EqdeLKR8i55FCIwZBnQAYCe6MtrOAMu1IYamjASsrFJ83dXHJZBCeWP0mJPkRvhZB6lZAeZBuROswqgjAz3QZDZD";
 
-const app = new koa();
-app.use(bodyParser());
+const config = {
+  yak: {},
+  facebook: {
+    verifyToken: VERIFY_TOKEN,
+    pageAccessToken: PAGE_ACCESS_TOKEN,
+    getResponse: async (input) => {
+      return {
+        message: {
+          text: `Heard you say ${input.message.text}`
+        }
+      }
+    }
+  },
+  port: 9001
+}
 
-app.use(routes.get("/yak", yak.index));
-app.use(routes.get("/api/fb/webhook", facebookAPI.webhook_get));
-app.use(routes.post("/api/fb/webhook", facebookAPI.webhook_post));
-
-app.listen(9001);
+paddock(config);
