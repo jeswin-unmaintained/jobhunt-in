@@ -43,7 +43,7 @@ defContext("get-salary", (context, otherContexts) => {
   });
 });
 
-defContext("get-location", () => {
+defContext("get-location", (context) => {
   onEntry(() => {
     send("Which city?")
   });
